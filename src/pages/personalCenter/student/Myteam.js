@@ -45,8 +45,6 @@ const MyTeam = () => {
   //展开内容
   const viewModal = contest => {
     setList(contest);
-    console.log(contest);
-    // setTitle(contest.contest.title);
     setVisible(true);
   }
 

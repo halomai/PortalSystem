@@ -43,7 +43,6 @@ export default function DetailInfo() {
                 message.error(data.data.msg)
             }
         }).then( data => {
-            console.log(data);
             if(data.attribute === 'single'){
                 new_axios({
                     method:'GET',
@@ -51,10 +50,7 @@ export default function DetailInfo() {
                 }).then( res => {
                     if(res.data.code === '200'){
                         const data = res.data.data;
-                        console.log(data);
-                        console.log(compId)
                         data.forEach( item => {
-                            console.log(item.contest_id)
                             if(item.contest_id === parseInt(compId)){
                                 setIfparticipate(true);
                             }

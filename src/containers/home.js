@@ -24,6 +24,7 @@ export default function Home() {
     const [myRoles,setMyRoles] = useState([])
     const [isLogin, setIsLogin] = useState(store.getState().userInfo.status);
     const { confirm } = Modal;
+    const [state,setState] = useState(false);
     const [currentRole,setCurrentRole] = useState({});
     const { Option } = Select;
     const logout = () => {
@@ -89,7 +90,7 @@ export default function Home() {
             } )
         }
         
-    } ,[])
+    } ,[state])
     
 
     const handlechange = value => {
@@ -132,6 +133,7 @@ export default function Home() {
                         sessionStorage.setItem('persist:root',data);
                         sessionStorage.setItem('token',res.data.data.token);
                         sessionStorage.setItem('userId',res.data.data.role_id);
+                        setState(!state);
                         history.push('/home');
                     }
                     else {

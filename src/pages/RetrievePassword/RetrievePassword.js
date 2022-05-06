@@ -26,9 +26,7 @@ const Retrieve = () => {
 
   const myinter = () => {
     timer.current = setInterval( () => {
-      console.log(second)
       setSecond(--se);
-      console.log(se)
     },1000)
   }
   useEffect( () => {

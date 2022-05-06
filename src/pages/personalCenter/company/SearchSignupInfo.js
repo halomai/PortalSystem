@@ -50,7 +50,6 @@ const SearchSignupInfo = () => {
             url:url+`/api/v1/setting/contest/download/works?contest_id=${contest_id}`,
             responseType:'blob'
         }).then( res => {
-            console.log(res)
             if(res.status === 200){
                 var b = new Blob([res.data]);
                 // 根据传入的参数b创建一个指向该参数对象的URL

@@ -270,7 +270,6 @@ const Released = () => {
 
     //删除比赛
     const deleteContest = () => {
-        console.log(currentId);
         Modal.confirm({
             title:'请确认',
             content:

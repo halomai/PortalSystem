@@ -13,7 +13,6 @@ import ContestList from './teacher/ContestList';
 import RoleManagement from './superManager/RoleManagement';
 import url from '../../server/api/url';
 import { Route, Switch } from 'react-router-dom';
-import store from '../../redux/store';
 import new_axios from '../../server/api/axios';
 import NoticeManagement from './superManager/NoticeManagement';
 
